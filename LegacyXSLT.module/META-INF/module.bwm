@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_FQ-BcNvaEeaEDopSfxC_yw" targetNamespace="http://tns.tibco.com/bw/composite/LegacyXSLT.module" name="LegacyXSLT.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_NjR14NvaEeaEDopSfxC_yw" name="Bank" promote="ComponentProcess/Bank">
+    <sca:interface.wsdl xmi:id="_NjZxsNvaEeaEDopSfxC_yw" interface="http://xmlns.example.com/20170116055359PLT#wsdl.interface(Bank)" scaext:wsdlLocation="../Processes/legacyxslt/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_Njl-8NvaEeaEDopSfxC_yw" name="RestService" path="/Bank" docBasePath="http://localhost:7777/LegacyXSLT.module" docResourcePath="Bank" basePath="/" connector="legacyxslt.module.Process" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/LegacyXSLT.json">
+      <operation xmi:id="_NjsFkNvaEeaEDopSfxC_yw" operationName="get" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_Nlaj4dvaEeaEDopSfxC_yw">
+          <parameterMapping xmi:id="_NlbyANvaEeaEDopSfxC_yw" parameterName="Name" parameterType="Query" dataType="string" required="true" description=""/>
+          <parameterMapping xmi:id="_NlbyAdvaEeaEDopSfxC_yw" parameterName="value" parameterType="Query" dataType="string" required="true" description=""/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+      </operation>
+      <parameters xmi:id="_Nlaj4NvaEeaEDopSfxC_yw"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_NjsFkdvaEeaEDopSfxC_yw" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_GCm5wNvaEeaEDopSfxC_yw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GDH3INvaEeaEDopSfxC_yw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GDRBENvaEeaEDopSfxC_yw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GDV5kNvaEeaEDopSfxC_yw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GDiG0NvaEeaEDopSfxC_yw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GDwwUNvaEeaEDopSfxC_yw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_GEE5YNvaEeaEDopSfxC_yw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_FqNn4NvaEeaEDopSfxC_yw" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_FqO2ANvaEeaEDopSfxC_yw" processName="legacyxslt.module.Process"/>
+    <sca:service xmi:id="_NjM9YNvaEeaEDopSfxC_yw" name="Bank">
+      <sca:interface.wsdl xmi:id="_NjOLgNvaEeaEDopSfxC_yw" interface="http://xmlns.example.com/20170116055359PLT#wsdl.interface(Bank)" scaext:wsdlLocation="../Processes/legacyxslt/module/Process.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
